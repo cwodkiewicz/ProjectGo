@@ -1,0 +1,16 @@
+{% extends "homepage/layout.html" %}
+
+{% block body %}
+
+    <h1>Vacations</h1>
+    <ul>
+        {% for vacation in vacations %}
+            <li>
+                <a href="{% url 'vacation' vacation.id %}">
+                    Vacation {{ vacation.id }}: {{ vacation.destination_type }}, {{ vacation.destination }}, {{ vacation.destination_weather }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

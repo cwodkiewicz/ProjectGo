@@ -1,0 +1,15 @@
+{% extends "homepage/layout.html" %}
+
+{% block body %}
+
+<h1>Vacation </h1>
+
+<ul>
+    <li>Type: {{ vacation.destination_type }}</li>
+    <li>Destination: {{ vacation.destination }}</li>
+    <li>Weather: {{ vacation.destination_weather }}</li>
+</ul>
+
+<a href="{% url 'homepage' %}">Back to Full List</a>
+
+{% endblock %}
