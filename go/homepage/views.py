@@ -4,7 +4,7 @@ from .models import Vacation
 
 # Create your views here.
 def homepage(request):
-    return render(request, "homepage/index.html")
+    return render(request, "homepage/homepage.html")
 
 def vacation(request, vacation_id):
     vacation = Vacation.objects.get(pk=vacation_id)
