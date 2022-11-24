@@ -1,0 +1,41 @@
+{% extends "homepage/layout.html" %}
+
+{% block body %}
+{% load static %}
+<div class="container">
+    <div class="row gy-3">
+        <div class="col-12 text-center">                    
+            <div class="box">
+            Welcome to Go!  
+            </div>
+        </div>
+        <div class="col-4 text-center">
+            <div class="box">
+                <a href="{% url 'tropical_options' %}">
+                    <button class="btn">Tropical
+                        <img src="{% static 'imgs/tropical.jpg' %}" alt="tropical" class="img-fluid w-">
+                    </button>
+                </a>
+            </div>
+        </div>  
+        <div class="col-4 text-center">
+            <div class="box">
+                <a href="{% url 'historical_options' %}">
+                    <button class="btn">Historical
+                        <img src="{% static 'imgs/historical.jpg' %}" alt="historical" class="img-fluid w-">
+                    </button>
+                </a>
+            </div>
+        </div> 
+        <div class="col-4 text-center">
+            <div class="box">
+                <a href="{% url 'winter_options' %}">
+                    <button class="btn">Winter
+                        <img src="{% static 'imgs/winter.jpg' %}" alt="winter" class="img-fluid w-">
+                    </button>
+                </a>
+            </div>
+        </div> 
+    </div> 
+
+{% endblock %}
