@@ -1,12 +1,25 @@
-{% extends 'users/layout.html' %}
+<!DOCTYPE html>
 
-{% block content %}
-    <br>
-    <div class="alert alert-success" role="alert">
-        <h2 style="text-align: center;">Logged out!</h2>
-    </div>
+<html lang="en">
+    {% load static %}
+    <head>
+        <title>Users</title>
+    </head>
+    <body>
+        <p>
+            <a href="{% url 'homepage' %}">
+             <img src="{% static 'images/logo.png' %}">
+            </a>
+        </p>
+        <br>
+        <div class="alert alert-success" role="alert">
+            <h2 style="text-align: center;">Logged out!</h2>
+        </div>
 
-    <h3>Login again?</h3>
-    <a href="{% url 'login' %}">---> Login</a> <br>
-    <a href="{% url 'home' %}"><--- Or go back to home.</a>
-{% endblock content %}
+        <h3>Login again?</h3>
+        <a href="{% url 'login' %}">Login</a> <br>
+        <a href="{% url 'homepage' %}">Or go back to home.</a>
+    </body>
+</html>
+
+

@@ -13,7 +13,7 @@ def vacation(request, vacation_id):
     })
 
 def tropical_options(request):
-    return render(request, "homepage/vacation_options.html", {
+    return render(request, "homepage/Tropical-Options.html", {
         "vacations": Vacation.objects.filter(destination_type="Tropical")
     })
 

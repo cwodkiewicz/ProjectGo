@@ -1,10 +1,22 @@
-<h3>Register here</h3>
-<hr>
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    {% load static %}
+    <title>Register</title>
+    <body>
+        <p>
+            <a href="{% url 'homepage' %}">
+             <img src="{% static 'images/logo.png' %}">
+            </a>
+        </p>
+        <h3>Register here</h3>
+        <hr>
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
 
-    <button type="submit">Register</button>
+            <button type="submit">Register</button>
     
-</form><a href="{% url 'login' %}">Return to Login</a>
+        </form><a href="{% url 'login' %}">Return to Login</a>
+    </body>
+</html>
