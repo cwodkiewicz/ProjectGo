@@ -122,13 +122,13 @@
             <div class="u-align-center u-border-9 u-border-black u-border-no-bottom u-border-no-left u-border-no-right u-container-style u-image u-list-item u-radius-50 u-repeater-item u-shape-round u-image-2" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-direction="" data-animation-delay="250" data-image-width="500" data-image-height="750">
               <div class="u-container-layout u-similar-container u-container-layout-2">
                 <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-4"> Historical</h4>
-                <a href="https://nicepage.best" class="u-border-1 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-2 u-btn u-button-style u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-btn-2">more</a>
+                <a href="{% url 'historical_options' %}" class="u-border-1 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-2 u-btn u-button-style u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-btn-2">more</a>
               </div>
             </div>
             <div class="u-align-center u-border-9 u-border-black u-border-no-bottom u-border-no-left u-border-no-right u-container-style u-image u-list-item u-radius-50 u-repeater-item u-shape-round u-image-3" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-direction="" data-animation-delay="250" data-image-width="500" data-image-height="334">
               <div class="u-container-layout u-similar-container u-container-layout-3">
                 <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-5">Winter</h4>
-                <a href="https://nicepage.com/k/adult-website-templates" class="u-border-1 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-2 u-btn u-button-style u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-btn-3">more</a>
+                <a href="{% url 'winter_options' %}" class="u-border-1 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-2 u-btn u-button-style u-none u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-btn-3">more</a>
               </div>
             </div>
           </div>
@@ -142,26 +142,26 @@
           <div class="u-repeater u-repeater-1"><!--blog_post-->
             <div class="u-align-center u-blog-post u-border-1 u-border-grey-25 u-container-style u-repeater-item u-video-cover u-white u-repeater-item-1">
               <div class="u-container-layout u-similar-container u-container-layout-1">
-                <p class="u-text u-text-palette-5-dark-1 u-text-2">Miami FL</p>
+                <p class="u-text u-text-palette-5-dark-1 u-text-2">{{ vacations.0.destination }}</p>
                 <p class="u-align-center u-text u-text-default u-text-3"><span class="u-file-icon u-icon u-icon-1"><img src="{% static 'images/temperature.png' %}" alt=""></span>&nbsp;
                 </p>
-                <p class="u-text u-text-4">85°</p>
+                <p class="u-text u-text-4">{{ vacations.0.destination_weather }}°</p>
               </div>
             </div><!--/blog_post--><!--blog_post-->
             <div class="u-align-center u-blog-post u-border-1 u-border-grey-25 u-container-style u-repeater-item u-video-cover u-white u-repeater-item-2">
               <div class="u-container-layout u-similar-container u-container-layout-2">
-                <p class="u-text u-text-palette-5-dark-1 u-text-5">Washington DC</p>
+                <p class="u-text u-text-palette-5-dark-1 u-text-5">{{ vacations.22.destination }}</p>
                 <p class="u-align-center u-text u-text-default u-text-6"><span class="u-file-icon u-icon u-icon-2"><img src="{% static 'images/temperature.png' %}" alt=""></span>
                 </p>
-                <p class="u-text u-text-7">70°</p>
+                <p class="u-text u-text-7">{{ vacations.22.destination_weather }}°</p>
               </div>
             </div><!--/blog_post--><!--blog_post-->
             <div class="u-align-center u-blog-post u-border-1 u-border-grey-25 u-container-style u-repeater-item u-video-cover u-white u-repeater-item-3">
               <div class="u-container-layout u-similar-container u-container-layout-3">
-                <p class="u-text u-text-palette-5-dark-1 u-text-8">Denver CO</p>
+                <p class="u-text u-text-palette-5-dark-1 u-text-8">{{ vacations.11.destination }}</p>
                 <p class="u-align-center u-text u-text-default u-text-9"><span class="u-file-icon u-icon u-icon-3"><img src="{% static 'images/temperature.png' %}" alt=""></span>&nbsp;
                 </p>
-                <p class="u-text u-text-10">30°</p>
+                <p class="u-text u-text-10">{{ vacations.11.destination_weather }}°</p>
               </div>
             </div><!--/blog_post-->
           </div>
